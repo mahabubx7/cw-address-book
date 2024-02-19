@@ -1,0 +1,203 @@
+/*
+*=============================================
+* Project: Address Book
+* Applicant: Mahabub (@mahabubx7)
+*=============================================
+*/
+
+/*--- GLOBAL styles ---*/
+:root {
+    --bgColor: #ededed;
+    --bgColorI: #f9f9f9;
+    --bgColorII: #fff;
+    --textColor: #3e3e3e;
+    --textBl2: #5e5e5e;
+    --themeBg: #477ed7;
+    --textColorII: #fff;
+    --themeBGii: #5a50ef;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    line-height: 1.5rem;
+}
+
+/*--- CORE styles ---*/
+h1 { font-size: 3rem; }
+h2 { font-size: 2.75rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2rem; }
+h5 { font-size: 1.75rem; }
+h6 { font-size: 1.5rem; }
+h1,h2,h3,h4,h5,h6 {
+    color: var(--themeBGii);
+    font-weight: bold;
+    margin: 1.25rem 0;
+}
+
+p { font-size: 1.25rem; }
+
+/*--- CUSTOM: conventional classes (quite like a framework) ---*/
+.container {
+    width: 100%;
+    max-width: 1280px; /* For this application, it is okay in this range I guess */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid { display: grid; }
+.grid-center { place-items: center; }
+.grid-col {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    gap: 1rem;
+}
+
+.text-center { text-align: center !important; }
+
+.text-black { color: var(--textColor) !important; }
+
+.text-black-2 { color: var(--textBl2) !important; }
+
+.capitalize { text-transform: capitalize !important; }
+
+.uppercase { text-transform: uppercase !important; }
+
+.semi-bold { font-weight: 600; }
+
+/*--- REGULAR: Custom classes as needed ---*/
+.header {
+    background-color: var(--themeBg);
+    color: var(--textColorII);
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+}
+
+.header h1 { 
+    color: var(--textColorII); 
+    text-align: center;
+    font-weight: 900;
+    word-spacing: -20px;
+}
+
+.page {
+    width: 100%;
+    background-color: var(--bgColorII);
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    margin: 1rem auto;
+}
+
+
+#form fieldset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--themeBg);
+    border-radius: 0.25rem;
+    padding: 0.75rem 0.5rem;
+    margin: 0.25rem 0;
+}
+
+#form input,
+#form textarea
+ {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.35rem;
+    border: 1px solid var(--themeBg);
+}
+
+.btn {
+    background-color: var(--themeBg);
+    color: var(--textColorII);
+    border: 0;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-search {
+    background-color: var(--bgColor);
+    padding: 0;
+    border: 2px solid;
+    border-color: rgba(71, 126, 215, 0.5);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.btn-delete {
+    display: block;
+    background-color: var(--bgColorII);
+    border: 1.5px solid rgba(255, 0, 0, 0.75);
+    padding: 0.25rem 0.5rem;
+    color: red;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.btn-delete:hover {
+    background-color: rgba(255, 0, 0, 1);
+    color: var(--bgColorII);
+}
+
+.btn-submit {
+    display: block;
+    padding: 0.75rem 3rem;
+    margin: 1rem auto 0 auto;
+}
+
+#search {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#search input {
+    width: 85%;
+    max-width: 4000px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--themeBg);
+}
+
+#contacts {
+    list-style: none;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.contact {
+    background-color: var(--bgColorI);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin: 0.75rem 0;
+}
+
+/*--- RESPONSIVE styles ---*/
+@media screen and (max-width: 499.99px) { /* up to 500px range */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2.25rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.75rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.35rem; }
+}

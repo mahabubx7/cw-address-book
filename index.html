@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="style.css"> <!-- // CSS: Stylesheet -->
+</head>
+<body>
+    <!-- Main Element -->
+    <main>
+        <!-- Header -->
+        <header class="header flex flex-col">
+            <nav class="container">
+                <h1>address 📒 book</h1> <!-- // WebApp Tittle -->
+            </nav>
+        </header> <!-- // Header -->
+
+        <!-- Page -->
+        <div class="page container">
+            <!-- Search -->
+            <div id="search">
+                <input name="search" class="input input-search" placeholder="Search ...">
+                <button type="button" class="btn btn-search">🔎</button>
+            </div> <!-- // Search -->
+
+            <!-- Form -->
+            <form id="form">
+                <h4 class="text-center uppercase">Add new contact!</h4>
+
+                <fieldset>
+                    <label for="contactName">Name:</label>
+                    <input id="contactName" name="contactName" type="text"
+                     placeholder="i.e. Mr. John" required autocomplete="off">
+                </fieldset>
+
+                <fieldset>
+                    <label for="contactSurname">Surname:</label>
+                    <input id="contactSurname" name="contactSurname"  type="text"
+                     placeholder="i.e. Doe" required autocomplete="off">
+                </fieldset>
+
+                <fieldset>
+                    <label for="contactPhone">Phone:</label>
+                    <input id="contactPhone" name="contactPhone" type="text" 
+                     placeholder="i.e. +8801311052448" required autocomplete="off">
+                </fieldset>
+
+                <fieldset>
+                    <label for="contactAddress">Address:</label>
+                    <textarea id="contactAddress" name="contactAddress"
+                     placeholder="i.e. Road X, Gulshan-2, Dhaka" required autocomplete="off"></textarea>
+                </fieldset>
+
+                <button type="submit" class="btn btn-submit uppercase">add</button>
+            </form> <!-- // Form -->
+
+            <!-- Contacts -->
+            <ul id="contacts" class="grid grid-col"></ul> <!-- // Contacts -->
+        </div> <!-- // Page -->
+    </main> <!-- // Main Element -->
+
+    <!-- JavaScripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> <!-- // jQuery (from CDN) -->
+    <script src="./script.js"></script> <!-- // Script -->
+</body>
+</html>
