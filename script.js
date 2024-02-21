@@ -38,7 +38,7 @@ class Store {
         const matches = []
         for (const item of this.data) {
             if (item.name && regex.test(item.name)) matches.push(item);
-            if (item.surname && regex.test(item.surname)) matches.push(item);
+            else if (item.surname && regex.test(item.surname)) matches.push(item);
         }
         return matches.length ? matches : null;
     };
