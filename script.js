@@ -34,10 +34,13 @@ class Store {
         if (!['name', 'surname', 'phoneNumber', 'address'].includes(type)) {
             throw new Error('Error: Invalid field type!')
         }
-        const regex = new RegExp('\\b' + target + '\\b', 'i');
-        const contact = this.data.filter(item => regex.test(item[type]));
-        if (!contact.length > 0) return null;
-        return contact;
+        const regex = new RegExp(target, 'i');
+        const matches = []
+        for (const item of this.data) {
+            if (item.name && regex.test(item.name)) matches.push(item);
+            if (item.surname && regex.test(item.surname)) matches.push(item);
+        }
+        return matches.length ? matches : null;
     };
 
     // add an item
